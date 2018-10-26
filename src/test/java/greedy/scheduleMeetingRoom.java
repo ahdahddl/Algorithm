@@ -1,6 +1,5 @@
 package greedy;
 
-import com.sun.xml.internal.ws.api.model.MEP;
 import org.junit.Before;
 import org.junit.Test;
 
