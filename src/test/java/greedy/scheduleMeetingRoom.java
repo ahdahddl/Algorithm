@@ -57,8 +57,19 @@ public class scheduleMeetingRoom {
 
     public int schedule(){
 
+        int earliest = 0;
+        int selected = 0;
+        for(int i = 0; i < schedules.length; i++){
+            int meetingBegin = schedules[i].getBegin();
+            int meetingEnd = schedules[i].getEnd();
 
-        return -1;
+            if(earliest <= meetingBegin){
+                earliest = meetingEnd;
+                selected++;
+            }
+        }
+
+        return selected;
     }
 
     @Test
