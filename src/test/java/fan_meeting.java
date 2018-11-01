@@ -2,8 +2,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThat;
 
 public class fan_meeting {
 	
@@ -62,7 +60,6 @@ public class fan_meeting {
 		String fan = "FFFFFMMMMF";
 		
 		int ret = hug(member, fan);
-		assertThat(ret, is(6));
 	}
 
 }
