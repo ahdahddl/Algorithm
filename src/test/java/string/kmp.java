@@ -21,15 +21,32 @@ public class kmp {
             pi.set(i + begin, Math.max((Integer) pi.get(i + begin), i + 1));
           }
         }
-
         return pi;
     }
 
+
+    public ArrayList<Integer> getPartialMatch(String N){
+        int m = N.length();
+        ArrayList<Integer> pi = new ArrayList<Integer>(Collections.nCopies(m, 0));
+
+        int j = 0;
+        for(int i = 1; i < m; i++){
+            while (j > 0 && N.charAt(j) != N.charAt(i)){
+                j = pi.get(j - 1);
+            }
+            if(N.charAt(j) == N.charAt(i)){
+                pi.set(i, ++j);
+            }
+        }
+        return pi;
+    }
+
+
     @Test
     public void test(){
-        ArrayList<Integer> pi = getPartialMathchNaive("aabaabac");
+//        ArrayList<Integer> pi = getPartialMathchNaive("aabaabac");
+        ArrayList<Integer> pi = getPartialMatch("aabaabac");
         System.out.println(pi);
-
     }
 
 
