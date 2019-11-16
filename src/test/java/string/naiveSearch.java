@@ -2,7 +2,7 @@ package string;
 
 
 import org.hamcrest.core.Is;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
